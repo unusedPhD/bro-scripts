@@ -7,3 +7,4 @@
 #@load ./plugins/store-files-by-md5.bro
 #@load ./plugins/store-files-by-sha1.bro
 #@load ./plugins/store-files-by-sha256.bro
+
