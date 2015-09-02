@@ -1,4 +1,4 @@
-SOURCE: git://github.com/hosom/bro-file-extraction
+Source: git://github.com/hosom/bro-file-extraction
 ==================================================
 
 
