@@ -15,6 +15,7 @@ See the wiki for a breakdown of scripts per repo.
 * [criticalstack/bro-scripts](https://github.com/criticalstack/bro-scripts)
 * [CrowdStrike/cs-bro](https://github.com/CrowdStrike/cs-bro)
 * [fox-it/bro-scripts](https://github.com/fox-it/bro-scripts)
+* [hosom/bro-file-extraction](https://github.com/hosom/bro-file-extraction)
 * [initconf/brocon-15](https://github.com/initconf/brocon-15)
 * [jonschipp/bro-scripts](https://github.com/jonschipp/bro-scripts)
 * [jshlbrd/bro_scripts](https://github.com/jshlbrd/bro_scripts)
