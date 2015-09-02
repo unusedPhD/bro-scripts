@@ -1,3 +1,7 @@
+SOURCE: git://github.com/hosom/bro-file-extraction
+==================================================
+
+
 Bro Module for File Extraction
 ==============================
 
