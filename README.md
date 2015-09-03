@@ -27,6 +27,7 @@ See the wiki for a breakdown of scripts per repo.
 * [mpurzynski/broselytize](https://github.com/mpurzynski/broselytize)
 * [panaman/brocon2015](https://github.com/panaman/brocon2015)
 * [reservoirlabs/bro-scripts](https://github.com/reservoirlabs/bro-scripts)
+* [Security-Onion-Solutions/securityonion-bro-scripts](https://github.com/Security-Onion-Solutions/securityonion-bro-scripts)
 * [sethhall](https://github.com/sethhall?tab=repositories)
 
 ## Tools
