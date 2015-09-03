@@ -1,5 +1,3 @@
-@load policy/rapidphire/geo
-
 export {
     redef record Conn::Info += {
         orig_cc: string &optional &log;
