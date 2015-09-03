@@ -11,7 +11,6 @@ export {
     ## Toggles logging of matches to pdf.log.
     const logging = T &redef;
 
-
     redef enum Log::ID += { LOG };
 
     type Info: record {
@@ -42,9 +41,9 @@ event pdf_data(f: fa_file, data: string)
         }
     }
 
-event file_new(f: fa_file)
+event file_sniff(f: fa_file, meta: fa_metadata)
     {
-    if ( f?$mime_type && f$mime_type == "application/pdf")
+    if ( meta?$mime_type &&  meta$mime_type == "application/pdf")
         Files::add_analyzer(f, Files::ANALYZER_DATA_EVENT, [$stream_event=pdf_data]);
     }
 
