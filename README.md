@@ -41,3 +41,4 @@ See the wiki for a breakdown of scripts per repo.
 * [grigorescu/Brownian](https://github.com/grigorescu/Brownian)
 * [packetsled/bro_intel_linter](https://github.com/packetsled/bro_intel_linter) Bro intel feed linter
 * [mavam/vast](https://github.com/mavam/vast)
+* [set-element/InstrumendSSHD](https://github.com/set-element/InstrumentedSSHD)
