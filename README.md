@@ -29,6 +29,7 @@ See the wiki for a breakdown of scripts per repo.
 * [reservoirlabs/bro-scripts](https://github.com/reservoirlabs/bro-scripts)
 * [Security-Onion-Solutions/securityonion-bro-scripts](https://github.com/Security-Onion-Solutions/securityonion-bro-scripts)
 * [sethhall](https://github.com/sethhall?tab=repositories)
+* [sooshie/bro-scripts](https://github.com/sooshie/bro-scripts)
 
 ## Tools
 
