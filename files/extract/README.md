@@ -1,6 +1,7 @@
+```
 Source: git://github.com/hosom/bro-file-extraction
-==================================================
-
+License: .license/LICENSE-hosom
+```
 
 Bro Module for File Extraction
 ==============================
@@ -11,8 +12,6 @@ Additionally, this script will generate file extensions for commonly encountered
 
 Installation
 ------------
-
-::
 
 		cd <prefix>/share/bro/site/
 		git clone git://github.com/hosom/bro-file-extraction file-extraction
@@ -68,3 +67,8 @@ store-files-by-sha1.bro
 -------------
 
 Uses file_state_remove to rename extracted files based on the sha1 checksum whenever it is available.
+
+store-files-by-sha256.bro
+-------------
+
+Initiates file analyzer sha256 for designated file mime types and uses file_state_remove to rename extracted files based on the sha256 checksum whenever it is available.

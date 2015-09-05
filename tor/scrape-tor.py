@@ -1,3 +1,7 @@
+#
+# Source:  https://github.com/CrowdStrike/cs-bro/
+# License: .licenses/LICENSE-CrowdStrike
+#
 # Collect Tor server list from torstatus.blutmagie.de and convert it to a tab-delimited format
 # CrowdStrike 2015
 # josh.liburdi@crowdstrike.com

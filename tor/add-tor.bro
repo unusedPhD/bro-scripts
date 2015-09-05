@@ -1,3 +1,8 @@
+#
+# Source:  https://github.com/CrowdStrike/cs-bro/
+# License: .licenses/LICENSE-CrowdStrike
+#
+
 module Tor;
 
 export {

@@ -110,13 +110,13 @@ function log_persistent(conn_rec:Track_Conn_Record, duration: string, note: Noti
     info$conn_count = conn_rec$conn_count ;
     info$mean_time_between_conn = duration_to_hour_mins_secs(conn_rec$mean_time_between_conn) ;
 
-    if ([src, dst] !in log_table)
+    if ( [src, dst] !in log_table )
         {
-        if (info$conn_count > 3)
+        if ( info$conn_count > 3 )
             Log::write(Persistent::Conn_LOG, info);
         log_table[src, dst] = 1;
         }
-    else if (note == ShortDelete || note == LongDelete || note == MediumDelete)
+    else if ( note == ShortDelete || note == LongDelete || note == MediumDelete )
         {
         Log::write(Persistent::Conn_LOG, info);
         }

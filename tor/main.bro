@@ -1,3 +1,7 @@
+#
+# Source:  https://github.com/CrowdStrike/cs-bro/
+# License: .licenses/LICENSE-CrowdStrike
+#
 # Log Tor connections based on IP addresses along with Tor node metadata
 # Based on data collected from torstatus.blutmagie.de
 # CrowdStrike 2015

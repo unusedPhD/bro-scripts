@@ -1,11 +1,11 @@
+#
 # modified from https://github.com/reservoirlabs/bro-scripts/blob/master/track-dhcp/track-dhcp.bro
+#
 
 module TrackMAC;
 
 export {
-
     global ip_to_mac: table[addr] of string &synchronized &write_expire=1day;
-
     redef record Conn::Info += {
         orig_mac: string &optional &log;
         resp_mac: string &optional &log;

@@ -1,4 +1,7 @@
-# source https://github.com/hosom/bro-scripts/blob/master/pdf.bro
+#
+# source:  https://github.com/hosom/bro-scripts/
+# license: .licenses/LICENSE-hosom
+#
 
 module PDF;
 

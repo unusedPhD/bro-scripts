@@ -1,4 +1,6 @@
-# source: https://github.com/criticalstack/bro-scripts
+#
+# source:  https://github.com/criticalstack/bro-scripts
+# license: ./license/LICENSE-criticalstack
 #
 # Liam Randall ( @Hectaman ).  Critical Stack, LLC.
 # Script will log files to an inbound, outbound, or internal state.
