@@ -1,4 +1,4 @@
-# Bro-Scripts
+## Bro-Scripts
 
 This will be a collection of currated scripts from the community as well as contributions from phirelight.  All original sources will be included in scripts added from the community.
 
@@ -43,3 +43,5 @@ See the wiki for a breakdown of scripts per repo.
 * [packetsled/bro_intel_linter](https://github.com/packetsled/bro_intel_linter) Bro intel feed linter
 * [mavam/vast](https://github.com/mavam/vast)
 * [set-element/InstrumendSSHD](https://github.com/set-element/InstrumentedSSHD)
+* [mephux/bro.vim](https://github.com/mephux/bro.vim)
+
