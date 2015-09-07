@@ -34,6 +34,7 @@ See the wiki for a breakdown of scripts per repo.
 ## Tools
 
 * [bro/bro-sublime](https://github.com/bro/bro-sublime) SublimeText bro script syntax highlighter
+* [mephux/bro.vim](https://github.com/mephux/bro.vim) Vim bro script syntax highlighter and file detection
 * [bro/docker](https://github.com/bro/bro-docker)
 * [bro/try-bro](https://github.com/bro/try-bro)
 * [AlienVault-Labs/OTX-Apps-Bro-IDS](https://github.com/AlienVault-Labs/OTX-Apps-Bro-IDS)
