@@ -1,13 +1,16 @@
-## Bro-Scripts
+Bro-Scripts
+-----------
 
 This will be a collection of currated scripts from the community as well as contributions from phirelight.  All original sources will be included in scripts added from the community.
 
-## Guides
+Guides
+------
 
 * [bro/cheat-sheet](https://github.com/bro/cheat-sheet)
 * [broala/bro-cheatsheets](https://github.com/broala/bro-cheatsheets)
 
-## Scripts:
+Scripts
+-------
 
 See the wiki for a breakdown of scripts per repo.
 
@@ -31,7 +34,8 @@ See the wiki for a breakdown of scripts per repo.
 * [sethhall](https://github.com/sethhall?tab=repositories)
 * [sooshie/bro-scripts](https://github.com/sooshie/bro-scripts)
 
-## Tools
+Tools
+-----
 
 * [bro/bro-sublime](https://github.com/bro/bro-sublime) SublimeText bro script syntax highlighter
 * [bro/docker](https://github.com/bro/bro-docker)
@@ -45,3 +49,17 @@ See the wiki for a breakdown of scripts per repo.
 * [set-element/InstrumendSSHD](https://github.com/set-element/InstrumentedSSHD)
 * [mephux/bro.vim](https://github.com/mephux/bro.vim)
 
+Community
+---------
+
+* [Bro mailing list](http://mailman.icsi.berkeley.edu/mailman/listinfo/bro)
+* [Bro YouTube Channel](https://www.youtube.com/user/BroPlatform)
+* [Bro Twitter](https://twitter.com/Bro_IDS)
+* [@CriticalStack](https://twitter.com/CriticalStack)
+* [@doubburks](https://twitter.com/dougburks)
+* [@Hectaman](https://twitter.com/Hectaman) Liam Randall
+* [Github](https://github.com/TravisFSmith) [Twitter](https://twitter.com/MrTrav) Travis Smith 
+* [Github](https://github.com/sethhall) [Twitter](https://twitter.com/remor) Seth Hall
+* [@securityonion](https://twitter.com/securityonion)
+* [@Toosmooth](https://twitter.com/Toosmooth) Mike Reeves
+* [Github](https://github.com/rsmmr) [Twitter](https://twitter.com/rsmmr) Robin Sommer
