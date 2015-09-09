@@ -1,0 +1,66 @@
+[submodule "community/gitunique/bro-scripts"]
+	path = community/gitunique/bro-scripts
+	url = git@github.com:gitunique/bro-scripts.git
+[submodule "community/CrowdStrike/cs-bro"]
+	path = community/CrowdStrike/cs-bro
+	url = git@github.com:CrowdStrike/cs-bro.git
+[submodule "community/hosom/bro-scripts"]
+	path = community/hosom/bro-scripts
+	url = git@github.com:hosom/bro-scripts.git
+[submodule "community/hosom/bro-file-extraction"]
+	path = community/hosom/bro-file-extraction
+	url = git@github.com:hosom/bro-file-extraction.git
+[submodule "community/reservoirlabs/bro-scripts"]
+	path = community/reservoirlabs/bro-scripts
+	url = git@github.com:reservoirlabs/bro-scripts.git
+[submodule "community/initconf/brocon-15"]
+	path = community/initconf/brocon-15
+	url = git@github.com:initconf/brocon-15.git
+[submodule "community/sooshie/bro-scripts"]
+	path = community/sooshie/bro-scripts
+	url = git@github.com:sooshie/bro-scripts.git
+[submodule "community/michalpurzynski/bro-gramming"]
+	path = community/michalpurzynski/bro-gramming
+	url = git@github.com:michalpurzynski/bro-gramming.git
+[submodule "community/0xxon/bro-scripts"]
+	path = community/0xxon/bro-scripts
+	url = git@github.com:0xxon/bro-scripts.git
+[submodule "community/panaman/brocon2015"]
+	path = community/panaman/brocon2015
+	url = git@github.com:panaman/brocon2015.git
+[submodule "community/securitykitten/bro_scripts"]
+	path = community/securitykitten/bro_scripts
+	url = git@github.com:securitykitten/bro_scripts.git
+[submodule "community/jshlbrd/bro_scripts"]
+	path = community/jshlbrd/bro_scripts
+	url = git@github.com:jshlbrd/bro_scripts.git
+[submodule "community/jonschipp/bro-scripts"]
+	path = community/jonschipp/bro-scripts
+	url = git@github.com:jonschipp/bro-scripts.git
+[submodule "community/Alex-UK-PL/Steganalysis-BroScripts"]
+	path = community/Alex-UK-PL/Steganalysis-BroScripts
+	url = git@github.com:Alex-UK-PL/Steganalysis-BroScripts.git
+[submodule "community/sethhall/bro-junk-drawer"]
+	path = community/sethhall/bro-junk-drawer
+	url = git@github.com:sethhall/bro-junk-drawer.git
+[submodule "community/criticalstack/bro-scripts"]
+	path = community/criticalstack/bro-scripts
+	url = git@github.com:criticalstack/bro-scripts.git
+[submodule "community/mlaterman/Bro-BitTorrent"]
+	path = community/mlaterman/Bro-BitTorrent
+	url = git@github.com:mlaterman/Bro-BitTorrent.git
+[submodule "community/mlaterman/Bro-Packet-interarrival"]
+	path = community/mlaterman/Bro-Packet-interarrival
+	url = git@github.com:mlaterman/Bro-Packet-interarrival.git
+[submodule "community/hosom/bro-dataloss"]
+	path = community/hosom/bro-dataloss
+	url = git@github.com:hosom/bro-dataloss.git
+[submodule "community/hosom/bro-odd-services"]
+	path = community/hosom/bro-odd-services
+	url = git@github.com:hosom/bro-odd-services.git
+[submodule "community/mjaco/bro_scripts"]
+	path = community/mjaco/bro_scripts
+	url = git@github.com:mjaco/bro_scripts.git
+[submodule "community/justbeck/bro-xorpe"]
+	path = community/justbeck/bro-xorpe
+	url = git@github.com:justbeck/bro-xorpe.git
