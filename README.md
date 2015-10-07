@@ -3,6 +3,12 @@ Bro-Scripts
 
 This will be a collection of currated scripts from the community as well as contributions from phirelight.  All original sources will be included in scripts added from the community.
 
+To clone everything, including every community repo:
+
+    git clone git@github.com:phirelight/bro-scripts.git
+    cd bro-scripts 
+    git submodule foreach --recursive git checkout master
+
 Guides
 ------
 
