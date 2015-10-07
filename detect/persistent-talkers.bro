@@ -39,7 +39,6 @@ export {
          history: string &optional ;
          conn_state: string &optional ;
          per_conn_duration: interval ;
-
     };
 
     type a_set: record {
@@ -229,13 +228,6 @@ function remove_stale_conn(t: table[addr,addr] of Track_Conn_Record, idx: any): 
 
     }
 
-function debug_log(m: string)
-    {
-    return ;
-    #print per_debug, fmt ("%s, %s", network_time(), m);
-    #print fmt ("%s", m);
-    }
-
 event bro_init()
     {
     table_size_count=0 ;
@@ -261,17 +253,16 @@ event connection_state_remove(c: connection) &priority=-10
     local msg = "" ;
     local time_diff: string;
     local bloom_idx=fmt ("%s-%s", src,dst);
-    if (c$id$resp_p in chatty_ports)
+    if ( c$id$resp_p in chatty_ports )
         return ;
-    if (( src in Site::local_nets && dst in Site::local_nets) || src in Site::neighbor_nets || dst in Site::neighbor_nets)
+    if ( ( src in Site::local_nets && dst in Site::local_nets) || src in Site::neighbor_nets || dst in Site::neighbor_nets )
         return ;
-    if (is_reverse_failed_conn(c) || is_failed_conn(c) || ( /[Dd]/ !in c$history))
+    if ( is_reverse_failed_conn(c) || is_failed_conn(c) || ( /[Dd]/ !in c$history) )
         {
-        #print per_debug, fmt ("%s failed-conn: %s, %s, %s", c$conn$ts, c$conn$uid, src, dst );
         return ;
         }
 
-    if ([src, dst]  !in long_connections)
+    if ( [src, dst] !in long_connections )
         {
         local conn_rec: Track_Conn_Record ;
         conn_rec$src = src ;
@@ -304,18 +295,11 @@ event connection_state_remove(c: connection) &priority=-10
         if ((interval_to_double(c$duration)  > 10 * interval_to_double(long_connections[src, dst]$per_conn_duration/conn_count)) && conn_count > 10 &&mtbc > 0 sec)
             {
             msg = fmt ("long connections : %s, %s, duration: %s (%s) ", src, dst, time_diff, long_connections[src, dst]);
-            #debug_log (fmt ("%s", c));
-            #if (debug == 1)
-                #print per_debug, fmt ("SPIKE :: %s, %s, %s, %s, %s", c$duration, long_connections[src, dst]$per_conn_duration, conn_count, a/conn_count, double_to_interval(a/conn_count));
             NOTICE([$note=DurationSpike, $conn=c, $msg=msg, $identifier=cat(src, dst)]);
             }
 
         long_connections[src, dst]$per_conn_duration += c$duration;
-
         #long_connections[src, dst]$per_conn_duration += double_to_interval(interval_to_double(long_connections[src, dst]$per_conn_duration+c$duration)/conn_count);
-
-            #if (debug == 1)
-            #   print per_debug, fmt (":: %s, %s, %s, %s, %s", c$duration, long_connections[src, dst]$per_conn_duration, conn_count, a/conn_count, double_to_interval(a/conn_count));
 
         }
 
@@ -341,7 +325,6 @@ event connection_state_remove(c: connection) &priority=-10
         }
 
     log_persistent(long_connections[src, dst], time_diff, ProlongConversation, ONGOING);
-    #debug_log (fmt ("%s, %s, %s", c$conn$ts, c$id, c$duration));
 
     }
 
@@ -356,7 +339,6 @@ event print_table_size()
     local msg:string ;
     local byte_size = val_size(long_connections);
     msg = fmt ("table Bytes: %s , numbers was : %s", byte_size, original_size);
-    ##print per_debug, fmt ("table Bytes: %s , numbers was : %s", byte_size, original_size);
     NOTICE([$note=Table_size, $msg=msg]);
     #schedule 1 min { print_table_size ()}  ;
     }

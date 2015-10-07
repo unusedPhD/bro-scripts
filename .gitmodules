@@ -64,3 +64,27 @@
 [submodule "community/justbeck/bro-xorpe"]
 	path = community/justbeck/bro-xorpe
 	url = git@github.com:justbeck/bro-xorpe.git
+[submodule "community/tinchoa/bro"]
+	path = community/tinchoa/bro
+	url = https://github.com/tinchoa/bro.git
+[submodule "community/lruppert/bro-scripts"]
+	path = community/lruppert/bro-scripts
+	url = https://github.com/lruppert/bro-scripts.git
+[submodule "community/exp0se/bro-intel-generator"]
+	path = community/exp0se/bro-intel-generator
+	url = https://github.com/exp0se/bro-intel-generator.git
+[submodule "community/Morphick/bro"]
+	path = community/Morphick/bro
+	url = https://github.com/Morphick/bro.git
+[submodule "community/aboutsecurity/Bro-samples"]
+	path = community/aboutsecurity/Bro-samples
+	url = https://github.com/aboutsecurity/Bro-samples.git
+[submodule "community/lruppert/bro-tor"]
+	path = community/lruppert/bro-tor
+	url = https://github.com/lruppert/bro-tor.git
+[submodule "community/srunnels/bro-scripts"]
+	path = community/srunnels/bro-scripts
+	url = https://github.com/srunnels/bro-scripts.git
+[submodule "community/grigorescu/bro-scripts"]
+	path = community/grigorescu/bro-scripts
+	url = https://github.com/grigorescu/bro-scripts.git
