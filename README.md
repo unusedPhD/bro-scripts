@@ -7,7 +7,7 @@ To clone everything, including every community repo:
 
     git clone git@github.com:phirelight/bro-scripts.git
     cd bro-scripts 
-    git submodule foreach --recursive git checkout master
+    git submodule update --init --recursive
 
 Guides
 ------
