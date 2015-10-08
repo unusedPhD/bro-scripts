@@ -88,3 +88,174 @@
 [submodule "community/grigorescu/bro-scripts"]
 	path = community/grigorescu/bro-scripts
 	url = https://github.com/grigorescu/bro-scripts.git
+[submodule "community/LiamRandall/bro-scripts"]
+	path = community/LiamRandall/bro-scripts
+	url = https://github.com/LiamRandall/bro-scripts.git
+[submodule "community/sethhall/bro-scripts"]
+	path = community/sethhall/bro-scripts
+	url = https://github.com/sethhall/bro-scripts.git
+[submodule "community/bro/bro-scripts"]
+	path = community/bro/bro-scripts
+	url = https://github.com/bro/bro-scripts.git
+[submodule "community/fox-it/bro-scripts"]
+	path = community/fox-it/bro-scripts
+	url = https://github.com/fox-it/bro-scripts.git
+[submodule "community/3vi1john/bro-scripts"]
+	path = community/3vi1john/bro-scripts
+	url = https://github.com/3vi1john/bro-scripts.git
+[submodule "community/visiblerisk/Bro-scripts"]
+	path = community/visiblerisk/Bro-scripts
+	url = https://github.com/visiblerisk/Bro-scripts.git
+[submodule "community/sethhall/bro-securityonion"]
+	path = community/sethhall/bro-securityonion
+	url = https://github.com/sethhall/bro-securityonion.git
+[submodule "community/thorkill/bro-scripts"]
+	path = community/thorkill/bro-scripts
+	url = https://github.com/thorkill/bro-scripts.git
+[submodule "community/compilewithstyle/bro-scripts"]
+	path = community/compilewithstyle/bro-scripts
+	url = https://github.com/compilewithstyle/bro-scripts.git
+[submodule "community/kb1/bro-scripts"]
+	path = community/kb1/bro-scripts
+	url = https://github.com/kb1/bro-scripts.git
+[submodule "community/ashemery/bro-scripts"]
+	path = community/ashemery/bro-scripts
+	url = https://github.com/ashemery/bro-scripts.git
+[submodule "community/TravisFSmith/MyBroElk"]
+	path = community/TravisFSmith/MyBroElk
+	url = https://github.com/TravisFSmith/MyBroElk.git
+[submodule "community/mavam/brospects"]
+	path = community/mavam/brospects
+	url = https://github.com/mavam/brospects.git
+[submodule "community/doppiosecurity/bro_scripts"]
+	path = community/doppiosecurity/bro_scripts
+	url = https://github.com/doppiosecurity/bro_scripts.git
+[submodule "community/Security-Onion-Solutions/securityonion-bro-scripts"]
+	path = community/Security-Onion-Solutions/securityonion-bro-scripts
+	url = https://github.com/Security-Onion-Solutions/securityonion-bro-scripts.git
+[submodule "community/sethhall/bro-scripts-2"]
+	path = community/sethhall/bro-scripts-2
+	url = https://github.com/sethhall/bro-scripts-2.git
+[submodule "community/srunnels/broselytize"]
+	path = community/srunnels/broselytize
+	url = https://github.com/srunnels/broselytize.git
+[submodule "community/3vi1john/bro-intel-scripts"]
+	path = community/3vi1john/bro-intel-scripts
+	url = https://github.com/3vi1john/bro-intel-scripts.git
+[submodule "community/sethhall/bro-apt1"]
+	path = community/sethhall/bro-apt1
+	url = https://github.com/sethhall/bro-apt1.git
+[submodule "community/anthonykasza/beginner_brogramming"]
+	path = community/anthonykasza/beginner_brogramming
+	url = https://github.com/anthonykasza/beginner_brogramming.git
+[submodule "community/AlienVault-Labs/OTX-Apps-Bro-IDS"]
+	path = community/AlienVault-Labs/OTX-Apps-Bro-IDS
+	url = https://github.com/AlienVault-Labs/OTX-Apps-Bro-IDS.git
+[submodule "community/sethhall/bro-domain-generation"]
+	path = community/sethhall/bro-domain-generation
+	url = https://github.com/sethhall/bro-domain-generation.git
+[submodule "community/aeppert/bro_scripts"]
+	path = community/aeppert/bro_scripts
+	url = https://github.com/aeppert/bro_scripts.git
+[submodule "community/panaman/bro_scripts"]
+	path = community/panaman/bro_scripts
+	url = https://github.com/panaman/bro_scripts.git
+[submodule "community/0xxon/bro-utils"]
+	path = community/0xxon/bro-utils
+	url = https://github.com/0xxon/bro-utils.git
+[submodule "community/broala/bro-drwatson"]
+	path = community/broala/bro-drwatson
+	url = https://github.com/broala/bro-drwatson.git
+[submodule "community/broala/bro-cheatsheets"]
+	path = community/broala/bro-cheatsheets
+	url = https://github.com/broala/bro-cheatsheets.git
+[submodule "community/broala/bro-snippets"]
+	path = community/broala/bro-snippets
+	url = https://github.com/broala/bro-snippets.git
+[submodule "community/broala/bro-hardware"]
+	path = community/broala/bro-hardware
+	url = https://github.com/broala/bro-hardware.git
+[submodule "community/sheharbano/dns-security"]
+	path = community/sheharbano/dns-security
+	url = https://github.com/sheharbano/dns-security.git
+[submodule "community/benmeyer50/Bro-IDS-Scripts"]
+	path = community/benmeyer50/Bro-IDS-Scripts
+	url = https://github.com/benmeyer50/Bro-IDS-Scripts.git
+[submodule "community/packetsled/bro_intel_linter"]
+	path = community/packetsled/bro_intel_linter
+	url = https://github.com/packetsled/bro_intel_linter.git
+[submodule "community/packetsled/psled_intel_pre_processor"]
+	path = community/packetsled/psled_intel_pre_processor
+	url = https://github.com/packetsled/psled_intel_pre_processor.git
+[submodule "community/packetsled/bro_amqp_plugin"]
+	path = community/packetsled/bro_amqp_plugin
+	url = https://github.com/packetsled/bro_amqp_plugin.git
+[submodule "community/packetsled/bro_tcplog_plugin"]
+	path = community/packetsled/bro_tcplog_plugin
+	url = https://github.com/packetsled/bro_tcplog_plugin.git
+[submodule "community/packetsled/bro-scripts-destover"]
+	path = community/packetsled/bro-scripts-destover
+	url = https://github.com/packetsled/bro-scripts-destover.git
+[submodule "community/klehigh/cif2bro-helpers"]
+	path = community/klehigh/cif2bro-helpers
+	url = https://github.com/klehigh/cif2bro-helpers.git
+[submodule "community/sheharbano/icmp-security"]
+	path = community/sheharbano/icmp-security
+	url = https://github.com/sheharbano/icmp-security.git
+[submodule "community/sheharbano/BotFlex-with-correlation-framework"]
+	path = community/sheharbano/BotFlex-with-correlation-framework
+	url = https://github.com/sheharbano/BotFlex-with-correlation-framework.git
+[submodule "community/sheharbano/Correlation-Framework"]
+	path = community/sheharbano/Correlation-Framework
+	url = https://github.com/sheharbano/Correlation-Framework.git
+[submodule "community/sheharbano/BotFlex"]
+	path = community/sheharbano/BotFlex
+	url = https://github.com/sheharbano/BotFlex.git
+[submodule "community/sheharbano/scan"]
+	path = community/sheharbano/scan
+	url = https://github.com/sheharbano/scan.git
+[submodule "community/sheharbano/ipv6-security"]
+	path = community/sheharbano/ipv6-security
+	url = https://github.com/sheharbano/ipv6-security.git
+[submodule "community/cjdupreez/CountryCodeChecker"]
+	path = community/cjdupreez/CountryCodeChecker
+	url = https://github.com/cjdupreez/CountryCodeChecker.git
+[submodule "community/dsbeaver/bro-x509"]
+	path = community/dsbeaver/bro-x509
+	url = https://github.com/dsbeaver/bro-x509.git
+[submodule "community/antsankov/bro_experiments"]
+	path = community/antsankov/bro_experiments
+	url = https://github.com/antsankov/bro_experiments.git
+[submodule "community/jsiwek/bro_vetting"]
+	path = community/jsiwek/bro_vetting
+	url = https://github.com/jsiwek/bro_vetting.git
+[submodule "community/jsiwek/bro_bitcoin"]
+	path = community/jsiwek/bro_bitcoin
+	url = https://github.com/jsiwek/bro_bitcoin.git
+[submodule "community/initconf/timemachine-conf-scripts"]
+	path = community/initconf/timemachine-conf-scripts
+	url = https://github.com/initconf/timemachine-conf-scripts.git
+[submodule "community/initconf/smtp-analysis"]
+	path = community/initconf/smtp-analysis
+	url = https://github.com/initconf/smtp-analysis.git
+[submodule "community/broala/bro-shellshock"]
+	path = community/broala/bro-shellshock
+	url = https://github.com/broala/bro-shellshock.git
+[submodule "community/hosom/bro-sandworm"]
+	path = community/hosom/bro-sandworm
+	url = https://github.com/hosom/bro-sandworm.git
+[submodule "community/sketchymoose/BroVirusTotalScript"]
+	path = community/sketchymoose/BroVirusTotalScript
+	url = https://github.com/sketchymoose/BroVirusTotalScript.git
+[submodule "community/theflakes/security-onion-intel-scripts"]
+	path = community/theflakes/security-onion-intel-scripts
+	url = https://github.com/theflakes/security-onion-intel-scripts.git
+[submodule "community/thnyheim/misp2bro"]
+	path = community/thnyheim/misp2bro
+	url = https://github.com/thnyheim/misp2bro.git
+[submodule "community/paulpc/bro_regex"]
+	path = community/paulpc/bro_regex
+	url = https://github.com/paulpc/bro_regex.git
+[submodule "community/compilewithstyle/bro-blackbook"]
+	path = community/compilewithstyle/bro-blackbook
+	url = https://github.com/compilewithstyle/bro-blackbook.git
