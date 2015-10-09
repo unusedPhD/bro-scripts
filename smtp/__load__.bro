@@ -1,0 +1,1 @@
+@load ./typosquatting_email.bro
