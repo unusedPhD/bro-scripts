@@ -1,9 +1,10 @@
 @load ./conn
-@load ./dns
 @load ./detect
+@load ./dns
 @load ./files
 @load ./geo
 @load ./http
 @load ./misc
 @load ./smtp
+@load ./ssh
 @load ./tor
