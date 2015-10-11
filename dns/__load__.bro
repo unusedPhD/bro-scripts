@@ -1,1 +1,2 @@
+@load ./geo
 @load ./typosquatting
