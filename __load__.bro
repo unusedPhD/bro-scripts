@@ -1,9 +1,11 @@
+@load ./application
 @load ./conn
 @load ./detect
 @load ./dns
 @load ./files
 @load ./geo
 @load ./http
+@load ./intel
 @load ./misc
 @load ./smtp
 @load ./ssh
