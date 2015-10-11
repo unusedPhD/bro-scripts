@@ -18,24 +18,34 @@ export {
     #redef Site::local_nets += { 192.168.0.0/16 };
 }
 
-event bro_init() {
+event bro_init()
+    {
+
     local reduce = SumStats::Reducer($stream="uTP peering", $apply=set(SumStats::SUM));
     SumStats::create([$name = "BitTorrent uTP",
-		      $epoch = 1hr,
-		      $reducers = set(reduce),
-		      $epoch_result(ts: time, key: SumStats::Key, result: SumStats::Result) = {
-			NOTICE([$ts=ts, $note = UTPINFO::utpPeering,
-				$msg = fmt("BitTorrent via uTP obseved."),
-				$n = double_to_count(result["uTP peering"]$sum),
-				$src = key$host]);
-		      }]);
-}
-
-event signature_match(state: signature_state, msg: string, data: string) &priority=-3 {
-    if ( /bittorrent-utp/ in state$sig_id ) {
-    	if ( Site::is_local_addr(state$conn$id$orig_h) )
-    		SumStats::observe("uTP peering", [$host=state$conn$id$orig_h], [$num=1]);
-    	else if ( Site::is_local_addr(state$conn$id$resp_h) )
-    		SumStats::observe("uTP peering", [$host=state$conn$id$resp_h], [$num=1]);
+                        $epoch = 1hr,
+                        $reducers = set(reduce),
+                        $epoch_result(ts: time, key: SumStats::Key, result: SumStats::Result) = {
+                            NOTICE([$ts=ts, $note = UTPINFO::utpPeering,
+                                    $msg = fmt("BitTorrent via uTP obseved."),
+                                    $n = double_to_count(result["uTP peering"]$sum),
+                                    $src = key$host]);
+                        }
+                    ]);
     }
-}
+
+event signature_match(state: signature_state, msg: string, data: string) &priority=-3
+    {
+
+    if ( /bittorrent-utp/ in state$sig_id )
+        {
+
+        if ( Site::is_local_addr(state$conn$id$orig_h) )
+            SumStats::observe("uTP peering", [$host=state$conn$id$orig_h], [$num=1]);
+
+        else if ( Site::is_local_addr(state$conn$id$resp_h) )
+            SumStats::observe("uTP peering", [$host=state$conn$id$resp_h], [$num=1]);
+
+        }
+
+    }

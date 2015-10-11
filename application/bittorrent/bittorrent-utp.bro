@@ -11,8 +11,10 @@ export {
     redef Notice::ignored_types += { Signatures::Sensitive_Signature, Signatures::Multiple_Sig_Responders };
 }
 
-event signature_match(state: signature_state, msg: string, data: string) {
-    if ( /bittorrent-utp/ in state$sig_id )
-	state$conn$service = set("uTP");
-}
+event signature_match(state: signature_state, msg: string, data: string)
+    {
 
+    if ( /bittorrent-utp/ in state$sig_id )
+    state$conn$service = set("uTP");
+
+    }

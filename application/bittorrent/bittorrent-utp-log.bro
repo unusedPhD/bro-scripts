@@ -12,11 +12,11 @@ export {
     redef Notice::ignored_types += { Signatures::Sensitive_Signature, Signatures::Multiple_Sig_Responders };
     redef enum Log::ID += { LOG };
     type Info: record {
-    	ts:		time &log;
-    	# The host detected doing uTP peering
-    	host:	addr &log;
-    	# The number of times it performed uTP peering
-    	hits:	double &log;
+        ts:		time &log;
+        # The host detected doing uTP peering
+        host:	addr &log;
+        # The number of times it performed uTP peering
+        hits:	double &log;
     };
     #Used for running without broctl
     #redef Site::local_nets += { 192.168.0.0/16 };
@@ -34,12 +34,18 @@ event bro_init() {
                       }]);
 }
 
-event signature_match(state: signature_state, msg: string, data: string) &priority=-3 {
-    if ( /bittorrent-utp/ in state$sig_id ) {
-    	if ( Site::is_local_addr(state$conn$id$orig_h) )
-    		SumStats::observe("uTP peering", [$host=state$conn$id$orig_h], [$num=1]);
-    	else if ( Site::is_local_addr(state$conn$id$resp_h) )
-    		SumStats::observe("uTP peering", [$host=state$conn$id$resp_h], [$num=1]);
+event signature_match(state: signature_state, msg: string, data: string) &priority=-3
+    {
+
+    if ( /bittorrent-utp/ in state$sig_id )
+        {
+
+        if ( Site::is_local_addr(state$conn$id$orig_h) )
+            SumStats::observe("uTP peering", [$host=state$conn$id$orig_h], [$num=1]);
+
+        else if ( Site::is_local_addr(state$conn$id$resp_h) )
+            SumStats::observe("uTP peering", [$host=state$conn$id$resp_h], [$num=1]);
+        }
+
     }
-}
 
