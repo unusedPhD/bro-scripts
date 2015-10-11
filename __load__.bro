@@ -9,4 +9,3 @@
 @load ./misc
 @load ./smtp
 @load ./ssh
-@load ./tor
