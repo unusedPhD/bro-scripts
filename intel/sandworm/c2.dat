@@ -1,0 +1,9 @@
+#fields	indicator	indicator_type	meta.source	meta.desc	meta.url	meta.do_notice
+95.143.193.131	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
+46.165.222.6	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
+78.46.40.239	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
+144.76.119.48	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
+37.220.34.56	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
+46.4.28.218	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
+95.143.193.182	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
+5.61.38.31	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
