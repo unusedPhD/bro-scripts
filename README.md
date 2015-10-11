@@ -6,7 +6,7 @@ This will be a collection of currated scripts from the community as well as cont
 To clone everything, including every community repo:
 
     git clone git@github.com:phirelight/bro-scripts.git
-    cd bro-scripts 
+    cd bro-scripts
     git submodule update --init --recursive
 
 Guides
@@ -45,6 +45,7 @@ Tools
 
 * [bro/bro-sublime](https://github.com/bro/bro-sublime) SublimeText bro script syntax highlighter
 * [mephux/bro.vim](https://github.com/mephux/bro.vim) Vim bro script syntax highlighter and file detection
+* [srunnels/bro-mode](https://github.com/srunnels/bro-mode.git) Emacs major mode
 * [bro/docker](https://github.com/bro/bro-docker)
 * [bro/try-bro](https://github.com/bro/try-bro)
 * [AlienVault-Labs/OTX-Apps-Bro-IDS](https://github.com/AlienVault-Labs/OTX-Apps-Bro-IDS)
@@ -52,9 +53,9 @@ Tools
 * [DavidJBianco/Bro2Graph](https://github.com/DavidJBianco/Bro2Graph)
 * [grigorescu/Brownian](https://github.com/grigorescu/Brownian)
 * [packetsled/bro_intel_linter](https://github.com/packetsled/bro_intel_linter) Bro intel feed linter
-* [mavam/vast](https://github.com/mavam/vast)
 * [set-element/InstrumendSSHD](https://github.com/set-element/InstrumentedSSHD)
-* [mephux/bro.vim](https://github.com/mephux/bro.vim)
+* [mavam/vast](https://github.com/mavam/vast)
+* [krkhan/openwrt-bro](https://github.com/krkhan/openwrt-bro.git)
 
 Community
 ---------
@@ -65,7 +66,7 @@ Community
 * [@CriticalStack](https://twitter.com/CriticalStack)
 * [@doubburks](https://twitter.com/dougburks)
 * [@Hectaman](https://twitter.com/Hectaman) Liam Randall
-* [Github](https://github.com/TravisFSmith) [Twitter](https://twitter.com/MrTrav) Travis Smith 
+* [Github](https://github.com/TravisFSmith) [Twitter](https://twitter.com/MrTrav) Travis Smith
 * [Github](https://github.com/sethhall) [Twitter](https://twitter.com/remor) Seth Hall
 * [@securityonion](https://twitter.com/securityonion)
 * [@Toosmooth](https://twitter.com/Toosmooth) Mike Reeves
