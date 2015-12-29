@@ -4,3 +4,4 @@
 @load ./largeUpload.bro
 @load ./meterpreter.bro
 @load ./persistent_talkers.bro
+@load ./scan_udp.bro
