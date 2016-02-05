@@ -1,4 +1,5 @@
 @load ./bash-cve-2014-6271.bro
+@load ./bitcoin
 @load ./dataloss
 @load ./exploitkit.bro
 @load ./largeUpload.bro
