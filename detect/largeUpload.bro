@@ -19,9 +19,9 @@ global vpn_nets = set(172.16.0.0/24);#, 192.168.1.1/24);
 # Create an empty pattern where we're going to automatically create.
 global my_domain_suffixes = /MATCH_NOTHING/; # There is bug with setting blank patterns at the moment.
 
-const maxTx = 1500000;   #+0       # single conn Tx bytes over which we want to alert on immediately
-const recordTx = 100000; #+0        # destination hosts to record if over this many bytes
-const maxNumUp = 1; #13              # number of large uploads per IP before an email is generated for that IP
+const maxTx = 15000000;   #15MB default       # single conn Tx bytes over which we want to alert on immediately
+const recordTx = 1000000; #10MB default        # destination hosts to record if over this many bytes
+const maxNumUp = 13; #13 uploads default              # number of large uploads per IP before an email is generated for that IP
 
 # table indexed by source IP of hosts that have triggered notices and/or emails
 # if the number of large uploads exceed maxNumup then generate email
