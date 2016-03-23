@@ -75,7 +75,7 @@ export {
 
 	## Type of Bitcoin pool server host which, on discovery, should raise a
 	## notice.
-	const notice_pool_hosts = LOCAL_HOSTS &redef;
+	const notice_pool_hosts = ALL_HOSTS &redef;
 
 	## Extracts the value of the "method" key from a JSON-RPC request object.
 	##
@@ -91,18 +91,16 @@ function extract_json_rpc_request_method(json_obj: string): string
 	# grab '"method": "value"' string
 	local pat = /\"method\"([[:space:]]*):([[:space:]]*)\"[^"]*\"/; # "
 	local method_kv = find_all(json_obj, pat);
-
 	if ( |method_kv| != 1 ) return "";
 
-	local method_parts: string_array;
+	local method_parts: vector of string;
 
 	# split by double quotes to get the value string
 	for ( p in method_kv )
-		 method_parts = split(p, /\"/); # "
-
+		 method_parts = split_string(p, /\"/); # "
 	if ( |method_parts| != 5 ) return "";
 
-	return method_parts[4];
+	return method_parts[3];
 	}
 
 type Endpoint: record {
