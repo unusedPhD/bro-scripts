@@ -8,3 +8,4 @@
 #@load ./plugins/store-files-by-sha1.bro
 #@load ./plugins/store-files-by-sha256.bro
 
+redef FileExtract::prefix = ""; #REMEMBER TO CHANGE
