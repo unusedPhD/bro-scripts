@@ -19,7 +19,7 @@ event file_sniff(f: fa_file, meta: fa_metadata)
 event file_state_remove(f: fa_file)
     {
 
-    if ( !f$info?$extracted || !f$info?$sha1 || FileExtraction::path == "" )
+    if ( !f$info?$extracted || !f$info?$sha256 || FileExtract::prefix == "" )
         return;
 
     local orig = f$info$extracted;
@@ -27,7 +27,7 @@ event file_state_remove(f: fa_file)
     local split_orig = split_string(f$info$extracted, /\./);
     local extension = split_orig[|split_orig|-1];
 
-    local dest = fmt("%s%s-%s.%s", FileExtraction::path, f$source, f$info$sha1, extension);
+    local dest = fmt("%s%s-%s.%s", FileExtract::prefix, f$source, f$info$sha256, extension);
 
     local cmd = fmt("mv %s %s", orig, dest);
     when ( local result = Exec::run([$cmd=cmd]) )
