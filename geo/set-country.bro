@@ -1,7 +1,8 @@
+
 export {
 
     ## Path to csv file
-    const path: string = "" &redef;
+    const cou_path: string = "" &redef;
 
     redef record connection += {
         orig_country: string &optional &log;
@@ -16,14 +17,21 @@ global country: table[string] of country_Val = table();
 
 event bro_init()
     {
-    Input::add_table([$source=string_cat(path,"country.csv"), $name="Country Full Names", $idx=country_Idx, $val=country_Val, $destination=country]);
+    Input::add_table([$source=string_cat(cou_path,"country.csv"), $name="Country Full Names", $idx=country_Idx, $val=country_Val, $destination=country]);
     }
 
 event connection_established(c: connection)
     {
 
+    local orig_loc = lookup_location(c$id$orig_h);
+
+    print lookup_location(c$id$orig_h);
+
     if (orig_loc?$country_code)
         c$orig_country = country[orig_loc$country_code]$name;
+        print country[orig_loc$country_code]$name;
+
+    local resp_loc = lookup_location(c$id$resp_h);
 
     if (resp_loc?$country_code)
         c$resp_country = country[resp_loc$country_code]$name;
