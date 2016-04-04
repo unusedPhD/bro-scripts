@@ -1,7 +1,7 @@
 export {
     redef record DNS::Info += {
-        orig_asn: string &optional &log;
-        resp_asn: string &optional &log;
+        orig_asn: count &optional &log;
+        resp_asn: count &optional &log;
     };
 }
 
