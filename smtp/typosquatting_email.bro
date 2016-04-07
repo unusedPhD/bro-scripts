@@ -21,8 +21,7 @@ export {
     ##############################################################################################
     # If there are additional company domains that you'd like to check for fuzzy match
     ##############################################################################################
-    redef companylist = set("mycompany.com");
-}
+    redef companylist = set("mycompany.com","musecurit.com"); #latter needed for testing the script with provided pcap
 
 function extract_email(email: string): string_set {
     local temp: string_set ;
