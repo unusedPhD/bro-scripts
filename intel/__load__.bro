@@ -3,7 +3,7 @@
 @load frameworks/files/hash-all-files
 
 redef Intel::read_files += {
-    fmt("%s/apt1-fqdn.dat", @DIR),
-    fmt("%s/apt1-md5.dat", @DIR),
-    fmt("%s/apt1-certs.dat", @DIR)
+    fmt("%s/angler-ek-intel.txt", @DIR),
+    fmt("%s/goon-ek-intel.txt", @DIR),
+    fmt("%s/user-agents.txt", @DIR)
 };
