@@ -1,4 +1,6 @@
 #fields	indicator	indicator_type	meta.source	meta.desc	meta.url	meta.do_notice
+#commented lines are for testing
+#193.229.108.216	Intel::ADDR	Test	Google.com	https://google.com	T
 95.143.193.131	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
 46.165.222.6	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
 78.46.40.239	Intel::ADDR	Sandworm	Sandworm C&C Server	http://isightpartners.com	T
