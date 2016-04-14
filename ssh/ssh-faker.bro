@@ -9,10 +9,10 @@ redef enum Notice::Type += {
     Remote_SSH_Faker
 };
 
-event protocol_violation(c: connection, atype: count, aid: count, reason: string)
+event protocol_violation(c: connection, atype: Analyzer::Tag, aid: count, reason: string)
     {
 
-    if ( analyzer_name(atype) == "SSH" &&
+    if ( atype == Analyzer::ANALYZER_SSH &&
          !Site::is_local_addr(c$id$orig_h) &&
          c$id$resp_p == 22/tcp )
         {
