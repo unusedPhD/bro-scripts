@@ -1,22 +1,24 @@
 #Author: Nick Hoffman / securitykitten.github.io / @infoseckitten
 #Description:  A bro script to find typosquatted domain names within DNS requests
+@load ./dns_domains
 
 module TYPOSQUAT;
 
 export {
     redef enum Notice::Type += { Typosquat, };
-    const legit_domains: set [string] &redef;
-    redef legit_domains = {"google.com","microsoft.com"};
+    #const legit_domains: set [string] &redef;
+    #redef legit_domains = {"google.com","microsoft.com"};
 }
 
 function typo_split(str: string): string
     {
 
-    local vec = split_all(str,/\./);
+    local vec = split_string_all(str,/\./);
+
 
     if (|vec| > 2)
         {
-        local out = vec[|vec|-2] + vec[|vec|-1] + vec[|vec|];
+        local out = vec[|vec|-3] + vec[|vec|-2] + vec[|vec|-1];
         return out;
         }
 
@@ -39,7 +41,7 @@ event dns_request(c: connection, msg: dns_msg, query: string, qtype: count, qcla
         local clean_query: string;
 
     clean_query = typo_split(query);
-    for ( i in legit_domains )
+    for ( i in TYPOSQUAT::legit_domains )
         {
 
         #Get the distance and maximum distance
