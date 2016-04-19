@@ -95,3 +95,39 @@ event dns_A_reply(c: connection, msg: dns_msg, ans: dns_answer, a: addr)
         schedule ans$TTL + 1sec { delete_detect_fast_fluxers(query) };
         }
     }
+
+event dns_AAAA_reply(c: connection, msg: dns_msg, ans: dns_answer, a: addr)
+    {
+    if (ans$TTL > 30 mins || msg$num_answers < 4)
+        {
+        return;
+        }
+
+    local query = ans$query;
+
+    # Don't keep any extra state about false positives
+    if ( ff_false_positives in query )
+        {
+        return;
+        }
+
+    if ( query in detect_fast_fluxers )
+        {
+        local fluxer = detect_fast_fluxers[query];
+
+        add fluxer$A_hosts[a];
+
+        local asn = lookup_asn(a);
+        add fluxer$ASNs[asn];
+        check_dns_fluxiness(query, c, ans);
+        }
+    else
+        {
+        # It's a query that hasn't yet been seen
+        local new_fluxer: dns_fluxer;
+        detect_fast_fluxers[ans$query] = new_fluxer;
+
+        # delete the element after the ttl is up with a little skew
+        schedule ans$TTL + 1sec { delete_detect_fast_fluxers(query) };
+        }
+    }
