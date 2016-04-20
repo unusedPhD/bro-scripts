@@ -1,4 +1,4 @@
-@load.bro ./bittorent-tcp
-@load.bro ./bittorent-utp
-@load.bro ./bittorent-log
-@load.bro ./bittorent-notice
+@load ./bittorrent-tcp
+@load ./bittorrent-utp
+#@load ./bittorrent-utp-log
+#@load ./bittorrent-utp-notice
