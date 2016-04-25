@@ -21,25 +21,20 @@ event bro_init()
     Input::add_table([$source=asn_path, $name="ASN Names", $idx=asn_Idx, $val=asn_Val, $destination=asn_name]);
     }
 
-event connection_established(c: connection) &priority=2
-    {
-
-    c$orig_asn = lookup_asn(c$id$orig_h);
-    c$resp_asn = lookup_asn(c$id$resp_h);
-
-    }
-
 event connection_established(c: connection) &priority=1
     {
-
-    local orig_asn = lookup_asn(c$id$orig_h);
-
-    if (orig_asn in asn_name)
-        c$orig_asn_name = asn_name[orig_asn]$name;
-
-    local resp_asn = lookup_asn(c$id$resp_h);
-
-    if (resp_asn in asn_name)
-        c$resp_asn_name = asn_name[resp_asn]$name;
-
+    
+        if (! Site::is_local_addr(c$id$orig_h) && ! Site::is_private_addr(c$id$orig_h))
+        {
+            local orig_asn = lookup_asn(c$id$orig_h);
+            if (orig_asn in asn_name)
+                c$orig_asn_name = asn_name[orig_asn]$name;
+        }
+    
+        if (! Site::is_local_addr(c$id$resp_h) && ! Site::is_private_addr(c$id$resp_h))
+        {
+            local resp_asn = lookup_asn(c$id$resp_h);
+            if (resp_asn in asn_name)
+                c$resp_asn_name = asn_name[resp_asn]$name;
+        }
     }
