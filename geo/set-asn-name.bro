@@ -2,7 +2,7 @@
 export {
 
     ## Path to csv file
-    const asn_path: string = "" &redef;
+    const asn_path: string = fmt("%s/asn.csv", @DIR);
 
     redef record connection += {
         orig_asn_name: string &optional &log;
@@ -18,7 +18,7 @@ global asn_name: table[count] of asn_Val = table();
 
 event bro_init()
     {
-    Input::add_table([$source=string_cat(asn_path,"asn.csv"), $name="ASN Names", $idx=asn_Idx, $val=asn_Val, $destination=asn_name]);
+    Input::add_table([$source=asn_path, $name="ASN Names", $idx=asn_Idx, $val=asn_Val, $destination=asn_name]);
     }
 
 event connection_established(c: connection) &priority=2

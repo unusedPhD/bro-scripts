@@ -2,7 +2,7 @@
 export {
 
     ## Path to csv file
-    const cou_path: string = "" &redef;
+    const cou_path: string = fmt("%s/country.csv", @DIR);
 
     redef record connection += {
         orig_country: string &optional &log;
@@ -17,7 +17,7 @@ global country: table[string] of country_Val = table();
 
 event bro_init()
     {
-    Input::add_table([$source=string_cat(cou_path,"country.csv"), $name="Country Full Names", $idx=country_Idx, $val=country_Val, $destination=country]);
+    Input::add_table([$source=cou_path, $name="Country Full Names", $idx=country_Idx, $val=country_Val, $destination=country]);
     }
 
 event connection_established(c: connection)
