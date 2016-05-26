@@ -259,3 +259,6 @@
 [submodule "community/compilewithstyle/bro-blackbook"]
 	path = community/compilewithstyle/bro-blackbook
 	url = https://github.com/compilewithstyle/bro-blackbook.git
+[submodule "community/evernote/bro-scripts"]
+	path = community/evernote/bro-scripts
+	url = https://github.com/evernote/bro-scripts.git
