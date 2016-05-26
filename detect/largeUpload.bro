@@ -4,7 +4,7 @@
 # and emails alerts on sufficiently large uploads if enabled.
 #
 
-module test;
+module Uploads;
 
 # add custom notice types
 redef enum Notice::Type += {
