@@ -8,3 +8,4 @@
 @load ./scan_udp.bro
 @load ./covert_tcp_steganalysis
 @load ./icmpvariance
+@load ./msb
