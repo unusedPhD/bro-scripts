@@ -9,3 +9,4 @@
 @load ./covert_tcp_steganalysis
 @load ./icmpvariance
 @load ./msb
+@load ./rfd
