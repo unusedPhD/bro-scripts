@@ -133,9 +133,6 @@
 [submodule "community/Security-Onion-Solutions/securityonion-bro-scripts"]
 	path = community/Security-Onion-Solutions/securityonion-bro-scripts
 	url = https://github.com/Security-Onion-Solutions/securityonion-bro-scripts.git
-[submodule "community/sethhall/bro-scripts-2"]
-	path = community/sethhall/bro-scripts-2
-	url = https://github.com/sethhall/bro-scripts-2.git
 [submodule "community/srunnels/broselytize"]
 	path = community/srunnels/broselytize
 	url = https://github.com/srunnels/broselytize.git
@@ -193,9 +190,6 @@
 [submodule "community/packetsled/bro_tcplog_plugin"]
 	path = community/packetsled/bro_tcplog_plugin
 	url = https://github.com/packetsled/bro_tcplog_plugin.git
-[submodule "community/packetsled/bro-scripts-destover"]
-	path = community/packetsled/bro-scripts-destover
-	url = https://github.com/packetsled/bro-scripts-destover.git
 [submodule "community/klehigh/cif2bro-helpers"]
 	path = community/klehigh/cif2bro-helpers
 	url = https://github.com/klehigh/cif2bro-helpers.git
@@ -220,9 +214,6 @@
 [submodule "community/cjdupreez/CountryCodeChecker"]
 	path = community/cjdupreez/CountryCodeChecker
 	url = https://github.com/cjdupreez/CountryCodeChecker.git
-[submodule "community/dsbeaver/bro-x509"]
-	path = community/dsbeaver/bro-x509
-	url = https://github.com/dsbeaver/bro-x509.git
 [submodule "community/antsankov/bro_experiments"]
 	path = community/antsankov/bro_experiments
 	url = https://github.com/antsankov/bro_experiments.git
