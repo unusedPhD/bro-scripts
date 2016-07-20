@@ -5,23 +5,24 @@
 
 @load base/frameworks/notice/main
 @load base/protocols/smtp/main
+@load ./domains
 
 module SMTP;
 
 export {
     redef enum Notice::Type += { Typosquat };
-    const whitelist: string_set &redef;
+    #global whitelist: set[string] &redef;
     const companylist: string_set &redef;
 
     ##############################################################################################
     # Whitelist is the list of legit sender domains that are triggering FP's and need to be tuned
     ##############################################################################################
-    redef whitelist = set("@gmail.com","example.com");
+    #redef whitelist = set("@gmail.com","example.com");
 
     ##############################################################################################
     # If there are additional company domains that you'd like to check for fuzzy match
     ##############################################################################################
-    redef companylist = set("mycompany.com");
+    redef companylist = set("mycompany.com","musecurit.com"); #latter needed for testing the script with provided pcap
 }
 
 function extract_email(email: string): string_set {

@@ -14,7 +14,7 @@ event http_header(c: connection, is_orig: bool, name: string, value: string)
 
         if ( name == "HOST" )
             # The split is done to remove the occasional port value that shows up here.
-            c$http$http_host = split1(value, /:/)[1];
+            c$http$http_host = split_string1(value, /:/)[0];
         }
     }
 

@@ -6,4 +6,7 @@
 @load ./meterpreter.bro
 @load ./persistent_talkers.bro
 @load ./scan_udp.bro
-@load ./xor-pe
+@load ./covert_tcp_steganalysis
+@load ./icmpvariance
+@load ./msb
+@load ./rfd

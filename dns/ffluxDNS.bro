@@ -54,7 +54,7 @@ function check_dns_fluxiness(query: string, c: connection, ans: dns_answer)
             NOTICE([$note=FastFlux,
                     $msg=fmt("%.6f Flux score for %s is %f (%d hosts in %d distinct ASNs %f asns/ips)",
                     network_time(), query, fluxer$score, |fluxer$A_hosts|, |fluxer$ASNs|, ASN_disparity),
-                    $sub=fmt("%s", ans), $conn=c], $suppress_for=1sec, $identifier=cat(c$id$orig_h,c$id$resp_h));
+                    $sub=fmt("%s", ans), $conn=c, $suppress_for=1sec, $identifier=cat(c$id$orig_h,c$id$resp_h)]);
             }
         }
     }
@@ -74,6 +74,42 @@ event dns_A_reply(c: connection, msg: dns_msg, ans: dns_answer, a: addr)
     # Don't keep any extra state about false positives
     if ( ff_false_positives in query )
         return;
+
+    if ( query in detect_fast_fluxers )
+        {
+        local fluxer = detect_fast_fluxers[query];
+
+        add fluxer$A_hosts[a];
+
+        local asn = lookup_asn(a);
+        add fluxer$ASNs[asn];
+        check_dns_fluxiness(query, c, ans);
+        }
+    else
+        {
+        # It's a query that hasn't yet been seen
+        local new_fluxer: dns_fluxer;
+        detect_fast_fluxers[ans$query] = new_fluxer;
+
+        # delete the element after the ttl is up with a little skew
+        schedule ans$TTL + 1sec { delete_detect_fast_fluxers(query) };
+        }
+    }
+
+event dns_AAAA_reply(c: connection, msg: dns_msg, ans: dns_answer, a: addr)
+    {
+    if (ans$TTL > 30 mins || msg$num_answers < 4)
+        {
+        return;
+        }
+
+    local query = ans$query;
+
+    # Don't keep any extra state about false positives
+    if ( ff_false_positives in query )
+        {
+        return;
+        }
 
     if ( query in detect_fast_fluxers )
         {

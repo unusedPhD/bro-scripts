@@ -15,7 +15,7 @@ event http_header(c: connection, is_orig: bool, name: string, value: string)
     if (/AUTHORIZATION/ in name && /Basic/ in value)
         {
 
-        local parts = split1(decode_base64(sub_bytes(value, 7, |value|)), /:/);
+        local parts = split_string1(decode_base64(sub_bytes(value, 7, |value|)), /:/);
 
         if (|parts| == 2)
             NOTICE([$note=HTTP::Basic_Auth_Server,

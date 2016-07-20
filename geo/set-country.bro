@@ -1,7 +1,8 @@
+
 export {
 
     ## Path to csv file
-    const path: string = "" &redef;
+    const cou_path: string = fmt("%s/country.csv", @DIR);
 
     redef record connection += {
         orig_country: string &optional &log;
@@ -16,16 +17,24 @@ global country: table[string] of country_Val = table();
 
 event bro_init()
     {
-    Input::add_table([$source=string_cat(path,"country.csv"), $name="Country Full Names", $idx=country_Idx, $val=country_Val, $destination=country]);
+    Input::add_table([$source=cou_path, $name="Country Full Names", $idx=country_Idx, $val=country_Val, $destination=country]);
     }
 
 event connection_established(c: connection)
     {
+    
 
-    if (orig_loc?$country_code)
-        c$orig_country = country[orig_loc$country_code]$name;
+        if (! Site::is_local_addr(c$id$orig_h) && ! Site::is_private_addr(c$id$orig_h))
+            {
+            local orig_loc = lookup_location(c$id$orig_h);
+            if (orig_loc?$country_code)
+                c$orig_country = country[orig_loc$country_code]$name;
+            }   
 
-    if (resp_loc?$country_code)
-        c$resp_country = country[resp_loc$country_code]$name;
-
+        if (! Site::is_local_addr(c$id$resp_h) && ! Site::is_private_addr(c$id$resp_h))
+            {
+            local resp_loc = lookup_location(c$id$resp_h);
+            if (resp_loc?$country_code)
+                c$resp_country = country[resp_loc$country_code]$name;
+            }
     }
